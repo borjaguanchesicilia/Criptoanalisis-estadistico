@@ -5,7 +5,7 @@ cadena = "PBVRQVICADSKAÑSDETSJPSIEDBGGMPSLRPWRÑPWYEDSDEÑDRDPCRCPQMNPWKUBZVSFN
 
 def comprobar(cadena):
 
-    f=open("fichero.txt","w")
+    f=open("analisis.txt","w")
     j = 3
     num = 0
     long3, long4, mcd3, mcd4, long7, long8, long9, iguales3, iguales3, iguales3, iguales3, iguales3, iguales3, iguales3  = ([] for i in range(14))
@@ -42,8 +42,9 @@ def comprobar(cadena):
     print("\n\nMCD entre trigramas repetidos: ", mcdTrigramas); f.write("\n\n\nMCD entre trigramas repetidos: "); f.write(str(mcdTrigramas))
     print("\n\nMCD entre tetragramas repetidos: ", mcdTetragramas); f.write("\n\nMCD entre tetragramas repetidos: "); f.write(str(mcdTetragramas))
 
-         
+
     f.close()
+    divisionSubcritogramas(mcdTetragramas, cadena)
 
 def iguales(cadenas, principal, longitud):
     
@@ -110,5 +111,35 @@ def  mcd(x, y):
         x, y = y, x % y
 
     return x
+
+
+def divisionSubcritogramas(tam, cadena):
+    f=open("analisis.txt", "a")
+    subcritograma = ""
+    subcritogramas = []
+    aux = 0
+
+    while(aux < tam): 
+        for i in range(aux, len(cadena), tam):
+            subcritograma = subcritograma + cadena[i]
+        f.write("\n\nSubcritograma %d: "%(aux+1)); f.write(subcritograma)
+        aux = aux + 1
+        analisisFrecuencias(subcritograma)
+        subcritograma = ""
+
+    f.close()
+
+
+def analisisFrecuencias(subcritograma):
+    f=open("analisis.txt", "a")
+    abc = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'Ñ', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
+    frecuencias = []
+
+    for i in range(len(abc)):
+        frecuencias.append((abc[i], subcritograma.count(abc[i])))
+
+    f.write("\n\nFrecuencias: "); f.write(str(frecuencias))
+    f.close()
+
 
 comprobar(cadena)
