@@ -7,15 +7,47 @@ Trigramas repetidos: [('SDE', 14), ('SDE', 42), ('GGM', 26), ('GGM', 282), ('GGM
 
 Tetragramas repetidos: [('GGMP', 26), ('GGMP', 282), ('GGMP', 386), ('YEDS', 39), ('YEDS', 111), ('VNUE', 83), ('VNUE', 359), ('HASE', 211), ('HASE', 367), ('VSUE', 235), ('VSUE', 267)]
 
+5gramas repetidos: []
+
+6gramas repetidos: []
+
+7gramas repetidos: []
+
+8gramas repetidos: []
+
 
 Distancia entre trigramas repetidos: [28, 256, 104, 256, 104, 200, 72, 72, 100, 320, 276, 276, 80, 164, 12, 16, 168, 112, 156, 156, 136, 88, 32, 32, 126, 68, 8, 28, 20, 48, 32]
 
 Distancia entre tetragramas repetidos: [256, 104, 72, 276, 156, 32]
 
+Distancia entre 5gramas repetidos: []
+
+Distancia entre 6gramas repetidos: []
+
+Distancia entre 7gramas repetidos: []
+
+Distancia entre 8gramas repetidos: []
+
 
 MCD entre trigramas repetidos: 2
 
 MCD entre tetragramas repetidos: 4
+
+MCD entre 5gramas repetidos: []
+
+MCD entre 6gramas repetidos: []
+
+MCD entre 7gramas repetidos: []
+
+MCD entre 8gramas repetidos: []
+
+Frecuencias: [('A', 12), ('B', 0), ('C', 4), ('D', 5), ('E', 30), ('F', 1), ('G', 7), ('H', 3), ('I', 18), ('J', 1), ('K', 0), ('L', 6), ('M', 13), ('N', 10), ('Ñ', 1), ('O', 16), ('P', 4), ('Q', 7), ('R', 10), ('S', 19), ('T', 7), ('U', 5), ('V', 5), ('W', 12), ('X', 3), ('Y', 2), ('Z', 1)]
+
+Frecuencias: [('A', 0), ('B', 14), ('C', 4), ('D', 11), ('E', 11), ('F', 12), ('G', 13), ('H', 6), ('I', 1), ('J', 11), ('K', 6), ('L', 4), ('M', 4), ('N', 7), ('Ñ', 8), ('O', 0), ('P', 16), ('Q', 3), ('R', 14), ('S', 8), ('T', 12), ('U', 13), ('V', 15), ('W', 1), ('X', 2), ('Y', 3), ('Z', 3)]
+
+Subcritograma 1: PVQIASASESPIDGMSRWÑWESEDDCCQNWUZSNRMIWEVCONEIQOMNVSIAYAEESTPLHUEOELXAEUEIEEWUMLQMRNPIMIVEIASATOMOSLWUOMMNOAERWSQOWMJRWSEIQSEEGRDNIASISSEITRETGMODOTSOEOTRYLWIWOGRQRSEXNLEGNMOXAOVHSHNEICAEEEOIFGAGMITWEEIE
+
+Subcritograma 2: BRVCDKÑDTJSEBGPLPRPYDDÑRPRPMPKBVFVDTPUQVBVUDFLNWUREKZECYDEFHBGÑSMHBVEPÑLSVFHNCPPBRBVÑTBVÑDNJMJKDDEPIFZQVFHSSJRFCTVBGPVUXNRJUMGBGNLGJDVUENGUEFGPRFGSTSQÑGRVPJFXTGPRJKTRBZTGEUTJTRJRFVUJBHSHUUTEFYTGPKBUÑNEU
 
 Frecuencias: [('A', 12), ('B', 0), ('C', 2), ('D', 3), ('E', 12), ('F', 1), ('G', 0), ('H', 0), ('I', 11), ('J', 0), ('K', 0), ('L', 5), ('M', 6), ('N', 9), ('Ñ', 1), ('O', 10), ('P', 2), ('Q', 1), ('R', 9), ('S', 7), ('T', 4), ('U', 5), ('V', 1), ('W', 0), ('X', 0), ('Y', 0), ('Z', 0)]
 
