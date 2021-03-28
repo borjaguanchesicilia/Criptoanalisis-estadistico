@@ -4,22 +4,24 @@ import numpy as np
 import os
 import shutil
 
-#cadena = "hacetreintamillonesdeañoscayounmeteoritodedoskilometrosdediametroenlassabanasdelvichadaunaregionalorientedecolombiaelimpactogenerounenormecraterenelquepocoapocofuecreciendounaselvaquehoyendaaeselhogardenoventafamiliasindigenasdelatribuseminomadasikuaniyalbergaalmenosmilquinientasespeciesdeanimalesycercademilcienespeciesdeplantassegunestudiosdelinstitutohumboldtelcentrodeinvestigacionenbiodiversidadyecosistemasmasimportantedelcolombialuissantiagocastillobiologodelinstitutoyliderdelproyectoquebuscaestudiaryprotegerlaculturaylanaturalezadelazonacuentaportelefonoqueelantiguoagujerocausadoporuncuerpocelestemidecincuentakilometrosdediametroycombinalafaunaylafloradelassabanasconlasespeciesylavegetaciondelosbosquestropicalesdelamazonaslaselvadealiwacomolallamanlosindigenascontienebiodiversidadtipicadelosdosecosistemasestecratereslabisagraentreelllanoylaselvadicecastillo"
+#cadenaOriginal = "HACETREINTAMILLONESDEAÑOSCAYOUNMETEORITODEDOSKILOMETROSDEDIAMETROENLASSABANASDELVICHADAUNAREGIONALORIENTEDECOLOMBIAELIMPACTOGENEROUNENORMECRATERENELQUEPOCOAPOCOFUECRECIENDOUNASELVAQUEHOYENDAAESELHOGARDENOVENTAFAMILIASINDIGENASDELATRIBUSEMINOMADASIKUANIYALBERGAALMENOSMILQUINIENTASESPECIESDEANIMALESYCERCADEMILCIENESPECIESDEPLANTASSEGUNESTUDIOSDELINSTITUTOHUMBOLDTELCENTRODEINVESTIGACIONENBIODIVERSIDADYECOSISTEMASMASIMPORTANTEDELCOLOMBIALUISSANTIAGOCASTILLOBIOLOGODELINSTITUTOYLIDERDELPROYECTOQUEBUSCAESTUDIARYPROTEGERLACULTURAYLANATURALEZADELAZONACUENTAPORTELEFONOQUEELANTIGUOAGUJEROCAUSADOPORUNCUERPOCELESTEMIDECINCUENTAKILOMETROSDEDIAMETROYCOMBINALAFAUNAYLAFLORADELASSABANASCONLASESPECIESYLAVEGETACIONDELOSBOSQUESTROPICALESDELAMAZONASLASELVADEALIWACOMOLALLAMANLOSINDIGENASCONTIENEBIODIVERSIDADTIPICADELOSDOSECOSISTEMASESTECRATERESLABISAGRAENTREELLLANOYLASELVADICECASTILLO"
+#cadena = "WAOTTETIZJAYXLXENQIDQPÑBICNÑOHCMQJEBHIGEDQSOFZIXEMQJRBIDQSINBEGHOQCLNISNQAZPSPTLIXCTPDNKNNHESXOZPLBHIQCTQSEOELBBBUPEXXMCPCGEGQCEEEUZTNBHMQRRNJEETNQAQHTPBRONFOOEFHTCETCUTNPEUZPSQAVNGUQWOLTNPPAQIEXWOSPRPTNBLEZJARPMUAINIIZSISTNNIDQAAGHIÑKSQBIZEMNSAFXKHPNUÑAXQEEVANAMQCOFBIXGUUCIQCTNIEFFEOXEFSENCIYPLQIYOTROPDQBIXRIQCEFFEOXEFSECAAZJAFIESKNQITHSIBIDQAIZITUJUGEHHBBBADGTLOTNGHOPTIZLEFJISPCUENQCBUEDULEEIIPPDLTCBIIFJEYPSYPSUBPBHTNCTQSEXROXEMÑXAXKIFIAZJINVOOPSGXLXEBUELBVOPTLUCSGXTHJOLAIPTRPTLCHOLTCGEQHTBHICNTSGKDUPRLFRBJESTRXPCHATHHALAAZPTHHAXTZNSEXPZBCAOKEZJACERGTLQUOZEQHTEXPNGXGHEASKJQHOOPUFPDBFOEKNOKEEFOOTLQITQBIPTCUCCHTNGPKUAOYTTEESPTDUPMQJRBÑCBBBUCAXPFNKNNÑLNULBHAPTLNISNQAZPSOENXPSQIPQRIQIYXPVQVEGPCUENPTLBIBBIQHTSGHOCXCNAEFSEXPMNOOZPSXPSQAVNSENAIJPCBBOXPLXPMNCLBIIZSISTNNICBCTUTNQQIBSIITRFXDNSTUFIOPDQAOFSOFTCBIIFJEYPSQITQRRNJEETSXPBUIASHAQCTETEXALNCOLAAFTLIPDUREOPSGXLXE"
 
-# ABER
-#cadena = "PBVRQVICADSKAÑSDETSJPSIEDBGGMPSLRPWRÑPWYEDSDEÑDRDPCRCPQMNPWKUBZVSFNVRDMTIPWUEQVVCBOVNUEDIFQLONMWNUVRSEIKAZYEACEYEDSETFPHLBHGUÑESOMEHLBXVAEEPUÑELISEVEFWHUNMCLPQPMBRRNBPVIÑMTIBVVEÑIDANSJAMTJOKMDODSELPWIUFOZMQMVNFOHASESRJWRSFQCOTWVMBJGRPWVSUEXINQRSJEUEMGGRBDGNNILAGSJIDSVSUEEINTGRUEETFGGMPORDFOGTSSTOSEQOÑTGRRYVLPWJIFWXOTGGRPQRRJSKETXRNBLZETGGNEMUOTXJATORVJHRSFHVNUEJIBCHASEHEUEUOTIEFFGYATGGMPIKTBWUEÑENIEEU"
+
+# HOLA
+#cadena = "ÑONEAGOITILMOZVOTSDDLOYOZQLYVJXMLIOOYWEOKSÑOZYSLVAOTYDDDLRSASSERVSXLHHDAIOXAZROLCWNHHRLUTOCENWZNHZZROSXTLROCVZZMIWLERWWPHQEONSXEYDFNLBZRSSNRHIORLBOLXJOPVQZAWDNOMJOCYSNILBÑOBBLSLZGAXJOHVNONKOLEZSVHVULRKSXOCSXTHTLMOZSAZWXDOUONHHÑEROEROPFSLASNVALDHHSKBOXIFOVBLGQAHZWETDDMOZBUOBSETILSLHAEJWOSKSLNOALLLHJCLGNAKSWIRQSETSDPLQSEZROPROXTHHDENJXEZIFDODDDLZSNZISTBIZHBAMORREERQONAGZDLWXVLHEINONIVBONIWZDOKORZWÑAKNOCVHSSASWAZALSOAAOYILNASÑERQZLVAMIHZFIZHLNAWLGVQLSAWVLVPSORDQOKSVITHEIAJEOFZSDLGÑERECOFSNTVFFEIJDCHSDTBRSAYNARVIOGLGVAJJVTBGLYROXAAJCARSKAKSVAGDXAJJONAOAOYIOLLTZNVFFELZLNAWQUVOQUPSCOJOFSHRZPVGFNJJORWDNERSDTLASDLQSNJJONAOUIRDWEAGZSKSÑIHAOTYDJCVAMITOVAMOFNHNVAMZZRHROLHHDAIOXAZQZNRODEZEOCOSDYROGENSEAJWZNKSVOZPZSXJOSAGZPOQLLLHÑEROWAGDXAZZLSLZGAKSLLOLLCVAZLHZVASOXLVHSNKWQETODCVBEILBOBODÑICSCSORLDAWAIJOÑERDDDVHOCVHSSASWAZSDTLQCAASCEZZLBOHLGYOONAGOERZVATDJLHHOLCOÑIJSNAZISLRD"
+
 
 # ARTIFICIAL
 cadena = "HRVMYZGPNEADBSPWOMSÑERHWXKCGOFNDXBJWTPTZDVWWXRKSOWELLWXLGLILMVNZTMOSADSRUIRIULEVVZVOFLCCNLRVZPTUCSOCIVGBJLGKOVODUPFMNPMAATNWLMOMRZUEXUTZÑMCCALXZJUGSQFEHIKTIRWCZFMXKWMEPEXDGÑUFAGSVLQMXOTGGUDLAVMMPOQÑACDVGWAMOBAPADBSNIUPNÑIXXUFAFMLLTJBJZAGTIXODTLFAKRULNZRIPJGZGLACFMRWUTIVQMBUNMOBADEKJMHPGADOAEBTFSGAYNEJVIIMÑPLNIVGMXXGKIOSUXXPIOBADSVZCRMUBUÑIGMLJSKUSEILÑBTOWTBZLUNMPKGUTCOUXPRDGATSGRVPTUGUBSOUBDJZUPDLDPXKTAKATOMRMTFAKTPZRLTUYMFMLNOCITGPCSUSSKTUYPCÑONAKNPPSQJIZLGZWIMNPNDTZNCYWASIÑEJWMPXTWYOCLIYZMDCSNAVMBZLKIRJPJIBJÑGZLLCMEBZZCGLLNRNCWINMZLDVEIEWOICFEENIUWTBEVEWIUTYWMEVAENPLCQIGFJVLWHIWAAÑOHIZZUECECPGVMPMUBEWIUXKNUECEXTRDPPWÑMTCOKWMIPCTEERGRKTTDPNLLRYIZUCGLLFCIZFLGSADSRUIRIUKOXLRMMXXGKIOSPEIAMIMTLCZIUIMNWSMOKKCJAVZOAITTSJAFMLLMRSWRIUSADECOIIMCSIHATITTSCSLLMRGSTAKUDSGVGIXKQUTSEEXJNWFPVORKBLFLVPPSCRWMPWULODETIANAVMMLSVMBJKTITORVMSFJKAAQRRXUYZGMLVLRGWDSCAEVVRWPHMEISEICEW"
 
-# CIFRAR
-#cadena = "UOFENQUJKRGKTEOEPIGPQZMRBGZKMNFIIGENKFDPQLJCAVMTJICLJCAKUKGRÑIHZOOTNVNVZFKRGIPZZCJFKUÑIJKTTPFVNGSQRSUIHYUUMYLSKUXLIVCYVOHBJTHOWPGGALJDOUBWGCQUXMTGANKQWMPRSCXPZCCKNGNGAJCEEBWGNKKFKDGIPXEDZFSOQSJRNCXTURKIRTOOAYJUKZHMANYZZETZJCAEPTELQÑNTOOCQVRKKFTOOBWZBWGTRSKTNKMQIPTAÑXTUENKWZPVWFEANPXZSRIWRLCLJWEOAFUEGAYRDQAZEIFWXUUTIRLENIXVGWUIRGWMWJAÑCRUICSHGNVZFSALWXKODZJVLFMXTIHZFUOFMHGDKÑTKYNIXVGWZNUAFMRCAUBJCEEWQMNKKFTIQUJK"
 
 # GLOBALMENTE
-#cadena = "NLQFTCPMZNERSZMOXPWPXETZHDAJAYZFIZODSIEAHQWSYUWMOWPXEIWJORJAWPXEIISVOTSLNEZTWJOZWINSEPTYSLGFGSAQNESXSSÑTOOIOIOUWPJAOWMYJEIEDHEXPVBÑQKXDSMOÑVNNIXOBFLBGICIGULEPCZQYQVVKNWFNÑAYZTWKVKBQFPLBRISÑOBEDPOTIKGCRFNZHIZNELLAJLSMWUGHÑQSÑADOIXTXXSPVSOXMZIPGÑOTIUGEZBCGVPFRQMEXFISZHNIVCYUGMKXIBSOETQVMKDRFAXTPNEIYJQFRNMHQFMQNWFNOETQVMKDRFPVMQGTWYOUVNOEXHWMUDRFLSYWGBXAEDIUWNSXWXKVQFNEDSPXMSGSTTSREOBSSOBCIZOMIXVYSRBDJPGBMMYESNADXEFBPVZGUAXFIPXOIZZPMMTEXÑMYDOÑTSMKBVEYEWMLZNMBESMZRFLSYWGBXAEDZLSOIEWIQAGPYOÑXBKYKMJTCLPWGÑHÑLGZPCAXQZIXVODUVFYETCQLBBTFDEXXDGÑSMAKAQNVYKXIBPZDXQEILZBPQFPIXTQZSUVOLRYVXVUNOVSLOSCIVAXQVECBSOXOKDIFMSOIOBQIFSÑTLVMXIPKEGPSÑPHUTPKEGPYNAPÑBQGVOGAFYELEELVDSAÑPONMWGMOÑADÑSZEEYOHQENTIFROGGSHEEMGUIQJOZPSMAWDÑIYEGPPSÑEXXWJOZBMLLSZTWQLHFLGMHQTOÑHODOWAONEOGWOÑLZEMZWMMOBBSNAQGBISOPJOÑTZQLWÑÑOETSBMOTHKVDTDZEIOIWÑDIFMLEIFNIICOUECPWXTFÑDOHRLPQGLIKVZMAXACXTWKVKBDSÑIOTWZSZMO"
+#cadena = "NQFTCPMZNERSZMOXPWPXETZHDAJAYZFIZODSIEAHQWSYUWMOWPXEIWJORJAWPXEIISVOTSLNEZTWJOZWINSEPTYSLGFGSAQNESXSSÑTOOIOIOUWPJAOWMYJEIEDHEXPVBÑQKXDSMOÑVNNIXOBFLBGICIGULEPCZQYQVVKNWFNÑAYZTWKVKBQFPLBRISÑOBEDPOTIKGCRFNZHIZNELLAJLSMWUGHÑQSÑADOIXTXXSPVSOXMZIPGÑOTIUGEZBCGVPFRQMEXFISZHNIVCYUGMKXIBSOETQVMKDRFAXTPNEIYJQFRNMHQFMQNWFNOETQVMKDRFPVMQGTWYOUVNOEXHWMUDRFLSYWGBXAEDIUWNSXWXKVQFNEDSPXMSGSTTSREOBSSOBCIZOMIXVYSRBDJPGBMMYESNADXEFBPVZGUAXFIPXOIZZPMMTEXÑMYDOÑTSMKBVEYEWMLZNMBESMZRFLSYWGBXAEDZLSOIEWIQAGPYOÑXBKYKMJTCLPWGÑHÑLGZPCAXQZIXVODUVFYETCQLBBTFDEXXDGÑSMAKAQNVYKXIBPZDXQEILZBPQFPIXTQZSUVOLRYVXVUNOVSLOSCIVAXQVECBSOXOKDIFMSOIOBQIFSÑTLVMXIPKEGPSÑPHUTPKEGPYNAPÑBQGVOGAFYELEELVDSAÑPONMWGMOÑADÑSZEEYOHQENTIFROGGSHEEMGUIQJOZPSMAWDÑIYEGPPSÑEXXWJOZBMLLSZTWQLHFLGMHQTOÑHODOWAONEOGWOÑLZEMZWMMOBBSNAQGBISOPJOÑTZQLWÑÑOETSBMOTHKVDTDZEIOIWÑDIFMLEIFNIICOUECPWXTFÑDOHRLPQGLIKVZMAXACXTWKVKBDSÑIOTWZSZMO"
 
-# POCHITO
-#cadena = "WOELBLSXBVHTBZADOLAWSPCQZKTNEJOSMNSEGKAWWSSDUQPEDBSVYWMRTRKHTXIHDGTSTHIODHUTHSSNCPVVPRCBUTGTUKVUTZEGKLUNSSSEVSIAQWCLSBAFOEAWZSCSTVCGSCDTSMVGPIGYMGSAFWLXIQEORVKITKSEYMVWTBFVCGOISNCIKJTVQFMGRPOGZMEVEUCYLXBEKGTBTTPAKRPTHXBFOÑXBPHFLSTIHWDBAXAXBQSIWOIWMBIGWÑONIMLUPONSMGDIAKRYÑWCWGTBTHTHRLKBSIRGHUBAPZGZGVSHQCKMFWAQKLUXHFSEOMMRTENHUNOIHGNCGSIIWKPIHSSNOUMIXIWAWAJBPQRLNSAQGTBLDSSKTDXHJWIHKBDCSOIPIRXKGYABRPRALKIHXHVLTTHBOUOTJDHICTBXRTZEVSIAQWCRCBHIOOAPTUEQCZBBZADDOWEDVDFLSBBIIKACNDÑZKKMLRTZRYWRSRIQXCXPKHEHMMIKRKHZREHDVLÑXGAOEBSNJHOARIGOJJTHSXÑPRGRISDCOEBMGIPEQYBXZTTQTWKJTSNHUNWVJQHÑÑXTGQJIÑHPRQWWLJCQWLZJDRSNLANSBWFLKBBRJGTBTYXZQSMNGEHFLLBOBSVYWRQEADOUTZPTCBUTNAOHRWLOSSNHAMOQOOHAVDCZCZMMETQKLARZPKGNMNORWQTLXZEHDVAKJTHVYWJWRONLAWSAOÑHHIBPHNHAXZLOFLIEWMOEVTIZPZNHTTBADUOUWWVSOHAVDCIKLUXPXDFODXGIWFHLNWFWEHLXZEHFVAXQEHKZBXAPHGZBXQHOVLZXHAODOATUHOGTBLSTZNRIGDÑZCZMEKPRKJMVOIIKRSI"
+
+# KASISKI <-- FALLA
+#cadena = "QAUMMBMRNMIERSUOFMLNMKÑHAUKGYUFTWDMYRABHNMNOLRAUWVEMZHCLÑDAIEÑBBOWUDKACATIFKANEDDAMOKDSCFKZÑGAWFKSYRAMFDMNEUWDYTLISMDRTZAUBHPMWEKWNWMWOKTWMZKTWZWWMUQNMIYKYAIWUYNEEUZWMPÑNVWNWICEDDSACÑHHGWWLKAWAWUOYGSZVÑUYVWUMKNKMASAKARNVPYÑUKSVMDKBBITCLÑTRNHTSNICICCSWPIADJWBÑKADTWWWCMASJEPWIWUMKAÑSIMURMCDWIFRTKLWAQMMBCSLWVPUCAMFÑAZEUPWCLÑPDIFDICSWÑNWMCTNLAYANEDPFCBRTNBHQCVBHSVDMUCWUMBWNEAUÑÑADIYIURWWEFJAYLRVWZLRLKDQMUYARSMMEKAVALPEZWBTSUMÑLÑLUWDYTLISSNRACAFBAKÑYCSAMRSUOTPHUWPOVMDRUCTABNDWILALWBLÑLIZHIMMTHYNÑJESUIWCBEDAIKIXBOMMYÑZUAUCDDCBAQSSWIDUKIDÑHKDWSSJWWAUCWWBKPHZMÑSÑFHUHACÑEDIFDPPUHIYEQÑRHKSEAKDHXHBCWCNMKZWMEDMLDMVIVMURUMUWUMKRRLHTWDZYSVMVRIVEMZHIKYMTPFKSKFSCFKGUAXSHBINEDILCILAFILMWWLSAWCXÑCAMLISKVWÑWDIMIHUVÑSYSTWLACÑSMZHZPMADMLNMUAEIRYUKSDILÑSFAVMSUPGAUWEYSKLDIEKUUOLPFNPPEFILMWWTAMFÑJROVPÑÑZCIVIVDPZIUIVÑSYSVWLÑKYSAAMÑTKSWAMÑKBAMMKÑAUATPLKÑBAWUMBMÑLDSSWWILSAWUDKDAKWMICTASDY"
 
 
 def comprobar(cadena):
@@ -31,7 +33,7 @@ def comprobar(cadena):
     num = 0
     carpeta = 0
     long3, long4, mcd3, mcd4, long5, long6, long7, long8, mcd5, mcd6, mcd7, mcd8 = ([] for i in range(12))
-    mcdTrigramas = mcdTetragramas = mcdPentagramas = mcdHexagramas = mcdHeptagramas = mcdOctogramas = 0
+    mcdTrigrafos = mcdTetragrafos = mcdPentagrafos = mcdHexagrafos = mcdHeptagrafos = mcdOctografos = 0
     while(num <= 8):
         for i in range(len(cadena)):          
             if (num == 0):
@@ -53,12 +55,12 @@ def comprobar(cadena):
                 long8.append(cadena[i:i+j+num])
         num = num + 1
 
-    f.write("Trigramas: "); f.write(str(long3))
-    f.write("\n\nTetragramas: "); f.write(str(long4))
-    f.write("\n\nPentagramas: "); f.write(str(long5))
-    f.write("\n\nHexagramas: "); f.write(str(long6))
-    f.write("\n\nHeptagramas: "); f.write(str(long7))
-    f.write("\n\nOctogramas: "); f.write(str(long8))
+    f.write("Trigrafos: "); f.write(str(long3))
+    f.write("\n\nTetragrafos: "); f.write(str(long4))
+    f.write("\n\nPentagrafos: "); f.write(str(long5))
+    f.write("\n\nHexagrafos: "); f.write(str(long6))
+    f.write("\n\nHeptagrafos: "); f.write(str(long7))
+    f.write("\n\nOctografos: "); f.write(str(long8))
 
 
 
@@ -69,65 +71,65 @@ def comprobar(cadena):
     iguales7 = iguales(long7, cadena, 7)
     iguales8 = iguales(long8, cadena, 8)
 
-    f.write("\n\n\nTrigramas repetidos: "); f.write(str(iguales3))
-    f.write("\n\nTetragramas repetidos: "); f.write(str(iguales4))
-    f.write("\n\nPentagramas repetidos: "); f.write(str(iguales5))
-    f.write("\n\nHexagramas repetidos: "); f.write(str(iguales6))
-    f.write("\n\nHeptagramas repetidos: "); f.write(str(iguales7))
-    f.write("\n\nOctogramas repetidos: "); f.write(str(iguales8))
+    f.write("\n\n\nTrigrafos repetidos: "); f.write(str(iguales3))
+    f.write("\n\nTetragrafos repetidos: "); f.write(str(iguales4))
+    f.write("\n\nPentagrafos repetidos: "); f.write(str(iguales5))
+    f.write("\n\nHexagrafos repetidos: "); f.write(str(iguales6))
+    f.write("\n\nHeptagrafos repetidos: "); f.write(str(iguales7))
+    f.write("\n\nOctografos repetidos: "); f.write(str(iguales8))
 
 
-    distanciasTrigramas = calcularDistancias(iguales3)
-    distanciasTetragramas = calcularDistancias(iguales4)
-    distanciasPentagramas = calcularDistancias(iguales5)
-    distanciasHexagramas = calcularDistancias(iguales6)
-    distanciasHeptagramas = calcularDistancias(iguales7)
-    distanciasOctogramas = calcularDistancias(iguales8)
+    distanciasTrigrafos = calcularDistancias(iguales3)
+    distanciasTetragrafos = calcularDistancias(iguales4)
+    distanciasPentagrafos = calcularDistancias(iguales5)
+    distanciasHexagrafos = calcularDistancias(iguales6)
+    distanciasHeptagrafos = calcularDistancias(iguales7)
+    distanciasOctografos = calcularDistancias(iguales8)
 
-    f.write("\n\n\nDistancia entre trigramas repetidos: "); f.write(str(distanciasTrigramas))
-    f.write("\n\nDistancia entre tetragramas repetidos: "); f.write(str(distanciasTetragramas))
-    f.write("\n\nDistancia entre Pentagramas repetidos: "); f.write(str(distanciasPentagramas))
-    f.write("\n\nDistancia entre Hexagramas repetidos: "); f.write(str(distanciasHexagramas))
-    f.write("\n\nDistancia entre Heptagramas repetidos: "); f.write(str(distanciasHeptagramas))
-    f.write("\n\nDistancia entre Octogramas repetidos: "); f.write(str(distanciasOctogramas))
-
-
-    mcdTrigramas = calcularMcd(distanciasTrigramas)
-    mcdTetragramas = calcularMcd(distanciasTetragramas)
-    mcdPentagramas = calcularMcd(distanciasPentagramas)
-    mcdHexagramas = calcularMcd(distanciasHexagramas)
-    mcdHeptagramas = calcularMcd(distanciasHeptagramas)
-    mcdOctogramas = calcularMcd(distanciasOctogramas)
+    f.write("\n\n\nDistancia entre Trigrafos repetidos: "); f.write(str(distanciasTrigrafos))
+    f.write("\n\nDistancia entre Tetragrafos repetidos: "); f.write(str(distanciasTetragrafos))
+    f.write("\n\nDistancia entre Pentagrafos repetidos: "); f.write(str(distanciasPentagrafos))
+    f.write("\n\nDistancia entre Hexagrafos repetidos: "); f.write(str(distanciasHexagrafos))
+    f.write("\n\nDistancia entre Heptagrafos repetidos: "); f.write(str(distanciasHeptagrafos))
+    f.write("\n\nDistancia entre Octografos repetidos: "); f.write(str(distanciasOctografos))
 
 
-    f.write("\n\n\nMCD entre trigramas repetidos: "); f.write(str(mcdTrigramas))
-    f.write("\n\nMCD entre tetragramas repetidos: "); f.write(str(mcdTetragramas))
-    f.write("\n\nMCD entre Pentagramas repetidos: "); f.write(str(mcdPentagramas))
-    f.write("\n\nMCD entre Hexagramas repetidos: "); f.write(str(mcdHexagramas))
-    f.write("\n\nMCD entre Heptagramas repetidos: "); f.write(str(mcdHeptagramas))
-    f.write("\n\nMCD entre Octogramas repetidos: "); f.write(str(mcdOctogramas))
+    mcdTrigrafos = calcularMcd(distanciasTrigrafos)
+    mcdTetragrafos = calcularMcd(distanciasTetragrafos)
+    mcdPentagrafos = calcularMcd(distanciasPentagrafos)
+    mcdHexagrafos = calcularMcd(distanciasHexagrafos)
+    mcdHeptagrafos = calcularMcd(distanciasHeptagrafos)
+    mcdOctografos = calcularMcd(distanciasOctografos)
 
 
-    print("\n\nPor Trigramas: \n")
-    carpeta = divisionSubcritogramas(mcdTrigramas, cadena, carpeta)
+    f.write("\n\n\nMCD entre Trigrafos repetidos: "); f.write(str(mcdTrigrafos))
+    f.write("\n\nMCD entre Tetragrafos repetidos: "); f.write(str(mcdTetragrafos))
+    f.write("\n\nMCD entre Pentagrafos repetidos: "); f.write(str(mcdPentagrafos))
+    f.write("\n\nMCD entre Hexagrafos repetidos: "); f.write(str(mcdHexagrafos))
+    f.write("\n\nMCD entre Heptagrafos repetidos: "); f.write(str(mcdHeptagrafos))
+    f.write("\n\nMCD entre Octografos repetidos: "); f.write(str(mcdOctografos))
 
 
-    print("\n\nPor tetragramas: \n")
-    carpeta = divisionSubcritogramas(mcdTetragramas, cadena, carpeta)
+    print("\n\nPor Trigrafos: \n")
+    carpeta = divisionSubcritogramas(mcdTrigrafos, cadena, carpeta)
+
+
+    print("\n\nPor Tetragrafos: \n")
+    carpeta = divisionSubcritogramas(mcdTetragrafos, cadena, carpeta)
  
 
-    print("\n\nPor Pentagramas: \n")
-    carpeta = divisionSubcritogramas(mcdPentagramas, cadena, carpeta)
+    print("\n\nPor Pentagrafos: \n")
+    carpeta = divisionSubcritogramas(mcdPentagrafos, cadena, carpeta)
 
 
-    print("\n\nPor Hexagramas: \n")
-    carpeta = divisionSubcritogramas(mcdHexagramas, cadena, carpeta)
+    print("\n\nPor Hexagrafos: \n")
+    carpeta = divisionSubcritogramas(mcdHexagrafos, cadena, carpeta)
 
-    print("\n\nPor Heptagramas: \n")
-    carpeta = divisionSubcritogramas(mcdHeptagramas, cadena, carpeta)
+    print("\n\nPor Heptagrafos: \n")
+    carpeta = divisionSubcritogramas(mcdHeptagrafos, cadena, carpeta)
 
-    print("\n\nPor Octogramas: \n")
-    carpeta = divisionSubcritogramas(mcdOctogramas, cadena, carpeta)
+    print("\n\nPor Octografos: \n")
+    carpeta = divisionSubcritogramas(mcdOctografos, cadena, carpeta)
 
     f.close()
 
