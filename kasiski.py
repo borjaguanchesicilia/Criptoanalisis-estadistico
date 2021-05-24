@@ -1,14 +1,6 @@
-import matplotlib
-import matplotlib.pyplot as plt
-import numpy as np
-import os
-import shutil
-from indiceCoincidencia import *
-
-
 def iguales(cadenas, principal, longitud):
     
-    val = iguales = []
+    val = []
     flag = 1
     aux = 0
     for i in range(len(cadenas)):
@@ -77,114 +69,95 @@ def  mcd(x, y):
     return x
 
 
-def divisionSubcritogramas(tam, cadena, carpeta):
+def kasiski(cadena):
 
-    abc = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'Ñ', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
-    f=open("analisis.txt", "a")
-    subcritograma = ""
-    clave = subcritogramas = []
-    aux = 0
+    f = open("kasiski.txt","w")
+    j = 3
+    long3, long4, long5, long6, long7, long8 = ([] for i in range(6))
+    num = mcdTrigrafos = mcdTetragrafos = mcdPentagrafos = mcdHexagrafos = mcdHeptagrafos = mcdOctografos = 0
 
-    f.write("\n----------------------------------------------------------------------------------");
-    if tam != 0 and tam != 1:
-        carpeta = carpeta + 1
-        path = "./diagramasDeFrecuencias/subcritogramas" + str(carpeta)
-        os.mkdir(path);
-        while(aux < tam): 
-            for i in range(aux, len(cadena), tam):
-                subcritograma = subcritograma + cadena[i]
-            stringSubcritograma = "Subcritograma " + str(aux+1)
-            f.write("\n\n" + stringSubcritograma); f.write(subcritograma)
-            aux = aux + 1
-            clave.append(calculo(analisisFrecuencias(subcritograma, stringSubcritograma, path)))
-            subcritograma = ""
-
-    f.close()
-    permutaciones = []
-    total = []
-    for i in range(len(clave)):
-        if len(clave[i]) != 1 and len(clave[i]) != 0:
-            for j in range(len(clave[i])):
-                permutaciones.append(abc[clave[i][j]])
-            total.append(permutaciones)
-            permutaciones = []
-        elif len(clave[i]) == 0:
-            total.append("A")
-        else:
-            total.append(abc[clave[i][0]])
-
-    print(total)
-    return carpeta
-
-
-def analisisFrecuencias(subcritograma, fichero, path):
+    # Se obtiene el criptograma dividido en n-grafos
     
-    f=open("analisis.txt", "a")
-    abc = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'Ñ', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
-    frecuencias = []
-    resultado = []
+    while(num <= 8):
+        for i in range(len(cadena)):          
+            if (num == 0):
+                long3.append(cadena[i:i+j])
 
-    for i in range(len(abc)):
-        frecuencias.append((abc[i], subcritograma.count(abc[i])))
+            elif (num == 1):
+                long4.append(cadena[i:i+j+num])
 
-    f.write("\n\nFrecuencias: "); f.write(str(frecuencias))
-    f.close()
+            elif (num == 2):
+                long5.append(cadena[i:i+j+num])
 
-    for i in range(len(frecuencias)):
-        resultado.append(frecuencias[i][1])
+            elif (num == 3):
+                long6.append(cadena[i:i+j+num])
 
-    
-    diagramaDeFrecuencias(resultado, fichero, path)
+            elif (num == 4):
+                long7.append(cadena[i:i+j+num])
 
-    return resultado
+            elif (num == 5):
+                long8.append(cadena[i:i+j+num])
+        num = num + 1
 
-
-def calculo(frecuencias):
-    
-    clave = []
-    for i in range(len(frecuencias)):
-        if frecuencias[i] >= 4:
-            if frecuencias[(i+4) % 27] >= 4:
-                if frecuencias[(i+4+11) % 27] >= 3:
-                    if frecuencias[(i+4+11+4) % 27] >= 1:
-                        clave.append(i)
-                        i = i + 1
-                    elif frecuencias[(i+4+11+4) % 27] == 1:
-                        clave.append(i)
-                        i = i + 1                         
-    return clave
+    f.write("Trigrafos: "); f.write(str(long3))
+    f.write("\n\nTetragrafos: "); f.write(str(long4))
+    f.write("\n\nPentagrafos: "); f.write(str(long5))
+    f.write("\n\nHexagrafos: "); f.write(str(long6))
+    f.write("\n\nHeptagrafos: "); f.write(str(long7))
+    f.write("\n\nOctografos: "); f.write(str(long8))
 
 
-def diagramaDeFrecuencias(frecuencias, fichero, path):
-    abc = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'Ñ', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
+    # Se obtienen las secuencias de caracteres repetidas en los n-grafos
 
-    x = np.arange(len(abc))
-    width = 0.35
+    iguales3 = iguales(long3, cadena, 3)
+    iguales4 = iguales(long4, cadena, 4)
+    iguales5 = iguales(long5, cadena, 5)
+    iguales6 = iguales(long6, cadena, 6)
+    iguales7 = iguales(long7, cadena, 7)
+    iguales8 = iguales(long8, cadena, 8)
 
-    fig, ax = plt.subplots()
-    rects1 = ax.bar(x - width/2, frecuencias, width, label='Frecuencias en subcritograma')
-
-    ax.set_ylabel('Total')
-    ax.set_xticks(x)
-    ax.set_xticklabels(abc)
-    ax.legend()
-
-
-    def autolabel(rects):
-        for rect in rects:
-            height = rect.get_height()
-            ax.annotate('{}'.format(height),
-                    xy=(rect.get_x() + rect.get_width() / 2, height),
-                    xytext=(0, 3),
-                    textcoords="offset points",
-                    ha='center', va='bottom')
+    f.write("\n\n\nTrigrafos repetidos: "); f.write(str(iguales3))
+    f.write("\n\nTetragrafos repetidos: "); f.write(str(iguales4))
+    f.write("\n\nPentagrafos repetidos: "); f.write(str(iguales5))
+    f.write("\n\nHexagrafos repetidos: "); f.write(str(iguales6))
+    f.write("\n\nHeptagrafos repetidos: "); f.write(str(iguales7))
+    f.write("\n\nOctografos repetidos: "); f.write(str(iguales8))
 
 
-    autolabel(rects1)
+    # Se calculan las distancias entre las secuencias de caracteres repetidas en los n-grafos
 
-    fig.tight_layout()
+    distanciasTrigrafos = calcularDistancias(iguales3)
+    distanciasTetragrafos = calcularDistancias(iguales4)
+    distanciasPentagrafos = calcularDistancias(iguales5)
+    distanciasHexagrafos = calcularDistancias(iguales6)
+    distanciasHeptagrafos = calcularDistancias(iguales7)
+    distanciasOctografos = calcularDistancias(iguales8)
 
-    salida = path + "/" + fichero + ".png"
-    fig.savefig(salida)
-    plt.cla()
-    plt.close()
+    f.write("\n\n\nDistancia entre Trigrafos repetidos: "); f.write(str(distanciasTrigrafos))
+    f.write("\n\nDistancia entre Tetragrafos repetidos: "); f.write(str(distanciasTetragrafos))
+    f.write("\n\nDistancia entre Pentagrafos repetidos: "); f.write(str(distanciasPentagrafos))
+    f.write("\n\nDistancia entre Hexagrafos repetidos: "); f.write(str(distanciasHexagrafos))
+    f.write("\n\nDistancia entre Heptagrafos repetidos: "); f.write(str(distanciasHeptagrafos))
+    f.write("\n\nDistancia entre Octografos repetidos: "); f.write(str(distanciasOctografos))
+
+
+    # Se aplica el mcd a las distancias entre las secuencias de caracteres repetidas en los n-grafos. 
+    # Se obtendrá la longitud de la clave
+
+    mcdTrigrafos = calcularMcd(distanciasTrigrafos)
+    mcdTetragrafos = calcularMcd(distanciasTetragrafos)
+    mcdPentagrafos = calcularMcd(distanciasPentagrafos)
+    mcdHexagrafos = calcularMcd(distanciasHexagrafos)
+    mcdHeptagrafos = calcularMcd(distanciasHeptagrafos)
+    mcdOctografos = calcularMcd(distanciasOctografos)
+
+
+    f.write("\n\n\nMCD entre Trigrafos repetidos: "); f.write(str(mcdTrigrafos))
+    f.write("\n\nMCD entre Tetragrafos repetidos: "); f.write(str(mcdTetragrafos))
+    f.write("\n\nMCD entre Pentagrafos repetidos: "); f.write(str(mcdPentagrafos))
+    f.write("\n\nMCD entre Hexagrafos repetidos: "); f.write(str(mcdHexagrafos))
+    f.write("\n\nMCD entre Heptagrafos repetidos: "); f.write(str(mcdHeptagrafos))
+    f.write("\n\nMCD entre Octografos repetidos: "); f.write(str(mcdOctografos))
+
+
+    return mcdTrigrafos, mcdTetragrafos, mcdPentagrafos, mcdHexagrafos, mcdHeptagrafos, mcdOctografos
